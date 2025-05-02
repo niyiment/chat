@@ -29,6 +29,9 @@ public class Message {
     @NotBlank(message = "Content is required")
     private String content;
 
+    @Enumerated(EnumType.STRING)
+    private MessageType type;
+
     @CreationTimestamp
     private LocalDateTime createdAt;
 }
